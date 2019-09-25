@@ -456,8 +456,8 @@ RB_DECLARE_CALLBACKS_MAX(static, vma_gap_callbacks,
 static void vma_gap_update(struct vm_area_struct *vma)
 {
 	/*
-	 * As it turns out, RB_DECLARE_CALLBACKS() already created a callback
-	 * function that does exactly what we want.
+	 * As it turns out, RB_DECLARE_CALLBACKS_MAX() already created
+	 * a callback function that does exactly what we want.
 	 */
 	vma_gap_callbacks_propagate(&vma->vm_rb, NULL);
 }
