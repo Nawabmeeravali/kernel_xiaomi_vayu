@@ -19,4 +19,16 @@
 	compatible = "qcom,sm8150";
 	qcom,pmic-name = "PM8150";
 	qcom,board-id = <0 0>;
+
+	reserved-memory {
+		ramoops@af000000 {
+			compatible = "ramoops";
+			reg = <0x00 0xaf000000 0x00 0x1000000>;
+			record-size = <0x400000>;
+			console-size = <0x400000>;
+			ftrace-size = <0x400000>;
+			pmsg-size = <0x400000>;
+			ecc-size = <0>;
+		};
+	};
 };
